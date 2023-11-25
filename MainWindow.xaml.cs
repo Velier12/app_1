@@ -24,10 +24,5 @@ namespace app_1
         {
             InitializeComponent();
         }
-
-        private void Frame_Navigated(object sender, NavigationEventArgs e)
-        {
-
-        }
     }
 }
