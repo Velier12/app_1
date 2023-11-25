@@ -8,14 +8,13 @@
         Title="MainWindow" Height="450" Width="625">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="235*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="42"/>
+            <RowDefinition/>
+            <RowDefinition Height="42"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="295*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        <Rectangle HorizontalAlignment="Center" Height="42" Grid.Row="2" Stroke="Black" VerticalAlignment="Center" Width="625" StrokeThickness="0"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="75"/>
+        <Frame Content="MainFrame" Grid.Row="1" HorizontalAlignment="Center" Width="625" Height="350" VerticalAlignment="Bottom"/>
+
     </Grid>
 </Window>
