@@ -24,5 +24,6 @@ namespace app_1.Pages
         {
             InitializeComponent();
         }
+
     }
 }
