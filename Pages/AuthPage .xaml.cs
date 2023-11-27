@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using app_1.Pages;
+using System.Data.Common;
 
 namespace app_1.Pages
 {
@@ -28,6 +30,15 @@ namespace app_1.Pages
         private void ButtonRegistration_OnClick(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Page2());
+        }
+
+        private void ButtonAuth_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(AuthBox.Text) || string.IsNullOrEmpty(PasswordBox.Text))
+            {
+                MessageBox.Show("Введите логин и пароль");
+                return;
+            }
         }
     }
 }
