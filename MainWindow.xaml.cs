@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using app_1.Pages;
+using app_1;
 
 namespace app_1
 {
@@ -25,9 +27,25 @@ namespace app_1
             InitializeComponent();
         }
 
-        private void Frame_Navigated(object sender, NavigationEventArgs e)
+        private void Frame_Navigated_1(object sender, NavigationEventArgs e)
         {
+            if (!(e.Content is Page page)) return;
+            this.Title = $"LESSON - {page.Title}";
 
+            if (page is AuthPage)
+            {
+                ButtonBack.Visibility = Visibility.Hidden;
+            }
+            
+            else
+            {
+                ButtonBack.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void ButtonBack_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack) MainFrame.GoBack();
         }
     }
 }

@@ -13,8 +13,8 @@
             <RowDefinition Height="42"/>
         </Grid.RowDefinitions>
         <Rectangle HorizontalAlignment="Center" Height="42" Grid.Row="2" Stroke="Black" VerticalAlignment="Center" Width="625" StrokeThickness="0"/>
-        <Button Content="Назад" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="75"/>
-        <Frame Content="MainFrame" Grid.Row="1" HorizontalAlignment="Center" Width="625" Height="350" VerticalAlignment="Bottom" Navigated="Frame_Navigated" Source="/Pages/AuthPage .xaml"/>
+        <Button x:Name="ButtonBack" Content="Назад" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="75" Click="ButtonBack_OnClick"/>
+        <Frame  x:Name="MainFrame" Content="MainFrame" Grid.Row="1" HorizontalAlignment="Center" Width="625" Height="350" VerticalAlignment="Bottom" Navigated="Frame_Navigated_1" Source="/Pages/AuthPage .xaml"/>
 
     </Grid>
 </Window>

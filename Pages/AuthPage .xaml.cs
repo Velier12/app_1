@@ -25,5 +25,9 @@ namespace app_1.Pages
             InitializeComponent();
         }
 
+        private void ButtonRegistration_OnClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new Page2());
+        }
     }
 }
