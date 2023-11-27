@@ -39,6 +39,17 @@ namespace app_1.Pages
                 MessageBox.Show("Введите логин и пароль");
                 return;
             }
+            using (var db = new Dementev_practicEntities())
+            {
+                var user = db.users
+                    .AsNoTracking()
+                    .FirstOrDefault(u -> u.name == AuthBox.Text && u.password == PasswordBox.Text);
+               
+                if (user == null)
+                {
+                    MessageBox.Show("Пользователь не найден");
+                }
+            }
         }
     }
 }
